@@ -81,7 +81,7 @@ const Home = () => {
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Get in Touch</h2>
           <div className="max-w-lg mx-auto text-center">
             <p className="text-gray-600 mb-6">
-              We'd love to hear from you! Feel free to reach out through any of the following channels:
+              We&apos;d love to hear from you! Feel free to reach out through any of the following channels:
             </p>
             <div className="flex flex-col items-center space-y-4">
               <a 
