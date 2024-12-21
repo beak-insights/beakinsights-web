@@ -1,35 +1,37 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
-import "./globals.css";
+import { Inter } from 'next/font/google'
+import { ThemeProvider } from '@/components/theme-provider'
+import { Navigation } from '@/components/navigation'
+import { Footer } from '@/components/footer'
+import './globals.css'
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const inter = Inter({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
-  title: "Beak Insights",
-  description: "Data, Development and Design",
-};
+export const metadata = {
+  title: 'Beak Insights - Data Design & Development',
+  description: 'Transform raw data into actionable insights with Beak Insights.',
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className="flex min-h-screen flex-col">
+            <Navigation />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }
