@@ -24,6 +24,12 @@ const works = [
     href: "/works/healthcare/felicity-lablink",
     gradient: "from-green-400 to-lime-500",
   },
+  {
+    title: "MQL5 Products",
+    description: "A collection of products for MetaTrader 5 platform that help traders enhance their trading outcomes.",
+    href: "/works/markets/mql5-products",
+    gradient: "from-blue-400 to-cyan-500",
+  },
 ]
 
 export default function WorksPage() {

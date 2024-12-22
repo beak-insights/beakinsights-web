@@ -24,9 +24,18 @@ export function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Projects</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>BeakDash</li>
-              <li>Felicity LIMS</li>
-              <li>Felicity LabLink</li>
+              <li>
+                <Link href="/works/analytics/beakdash">BeakDash</Link>
+              </li>
+              <li>
+                <Link href="/works/healthcare/felicity-lims">Felicity LIMS</Link>
+              </li>
+              <li>
+                <Link href="/works/healthcare/felicity-lablink">Felicity LabLink</Link>
+              </li>
+              <li>
+                <Link href="/works/markets/mql5-products">MQL5 Products</Link>
+              </li>
             </ul>
           </div>
           <div className="space-y-4">

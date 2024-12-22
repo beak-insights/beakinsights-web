@@ -44,8 +44,17 @@ const industries = [
       },
     ],
   },
+  {
+    name: "Markets",
+    items: [
+      { 
+        name: "MQL5 Products", 
+        href: "/works/markets/mql5-products",
+        description: "A collection of products for MetaTrader 5 platform that help traders enhance their trading outcomes."
+      },
+    ],
+  },
 ]
-
 
 
 const ListItem: React.FC<{
