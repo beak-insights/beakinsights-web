@@ -16,6 +16,7 @@ import { useState } from "react"
 
 const navigation = [
   { name: "Industries", type: "megaMenu", href: "" },
+  { name: "Blog", href: "/blog" },
 ]
 
 const industries = [
