@@ -135,7 +135,7 @@ export default function BlogPage() {
   )
 }
 
-export function BlogComingSoon() {
+function BlogComingSoon() {
   return (
     <div className="container mx-auto py-12">
       <motion.div

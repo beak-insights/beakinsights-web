@@ -25,8 +25,6 @@ export default function Home() {
     transition: { duration: 0.5 }
   }
 
-
-
   return (
     <div className="flex flex-col">
       {/* Hero Section */}

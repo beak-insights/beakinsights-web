@@ -7,7 +7,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Beak Insights - Data Design & Development',
+  title: 'Beak Insights - Data, Design & Development Services',
   description: 'Transform raw data into actionable insights with Beak Insights.',
 }
 
