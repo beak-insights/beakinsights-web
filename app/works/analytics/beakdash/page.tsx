@@ -5,8 +5,25 @@ import { ArrowLeft, BarChart2, Database, Lock } from 'lucide-react'
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import ReactECharts from "echarts-for-react"
+import { useState, useEffect } from "react"
 
 export default function BeakdashPage() {
+  const [mounted, setMounted] = useState(false)
+  const [windowWidth, setWindowWidth] = useState(1000)
+
+  useEffect(() => {
+    setMounted(true)
+    setWindowWidth(window.innerWidth)
+
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth)
+    }
+
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
+  
   const lineChartOption = {
     grid: { top: 8, right: 8, bottom: 24, left: 36 },
     xAxis: {
@@ -78,14 +95,20 @@ export default function BeakdashPage() {
     ease: "linear",
   }
 
+  if (!mounted) {
+    return null
+  }
+
+  const chartWidth = windowWidth + 500
+
   return (<div>
       {/* Background Charts */}
       <motion.div
-        initial={{ opacity: 0, rotate: -15, x: -window.innerWidth }}
+        initial={{ opacity: 0, rotate: -15, x: -windowWidth }}
         animate={{
           opacity: 0.2,
           rotate: -15,
-          x: [-(window.innerWidth + 500), window.innerWidth + 500],
+          x: [-(chartWidth), chartWidth],
         }}
         transition={bounceTransition}
         className="fixed w-[500px] top-24 transform scale-125"
@@ -94,11 +117,11 @@ export default function BeakdashPage() {
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0, rotate: 15, x: window.innerWidth }}
+        initial={{ opacity: 0, rotate: 15, x: windowWidth }}
         animate={{
           opacity: 0.2,
           rotate: 15,
-          x: [window.innerWidth + 500, -(window.innerWidth + 500)],
+          x: [chartWidth, -(chartWidth)],
         }}
         transition={{
           ...bounceTransition,
@@ -110,11 +133,11 @@ export default function BeakdashPage() {
       </motion.div>
 
       <motion.div
-        initial={{ opacity: 0, rotate: -10, x: -window.innerWidth }}
+        initial={{ opacity: 0, rotate: -10, x: -windowWidth }}
         animate={{
           opacity: 0.2,
           rotate: -10,
-          x: [-(window.innerWidth + 500), window.innerWidth + 500],
+          x: [-(chartWidth), chartWidth],
         }}
         transition={{
           ...bounceTransition,
