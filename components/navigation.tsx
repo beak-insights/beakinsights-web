@@ -15,10 +15,7 @@ import {
 import { useState } from "react"
 
 const navigation = [
-  { name: "Home", href: "/" },
-  { name: "Industries", type: "megaMenu" },
-  { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact" },
+  { name: "Industries", type: "megaMenu", href: "" },
 ]
 
 const industries = [
