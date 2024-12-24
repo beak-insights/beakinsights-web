@@ -9,7 +9,6 @@ import {
   Users, 
   Shield, 
   Award,
-  ChevronRight,
   Search,
   CodeSquare,
   Rocket,
