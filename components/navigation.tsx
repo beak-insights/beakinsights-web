@@ -88,8 +88,6 @@ function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
       document.body.style.overflow = 'hidden'
     } else {
       document.body.style.overflow = 'unset'
-      setMainExpandedSection(null)
-      setExpandedIndustry(null)
     }
 
     return () => {
@@ -98,7 +96,13 @@ function MobileMenu({ isOpen, onClose }: { isOpen: boolean; onClose: () => void 
   }, [isOpen])
 
   const handleMainSectionClick = (name: string) => {
-    setMainExpandedSection(mainExpandedSection === name ? null : name)
+    if (mainExpandedSection === name) {
+      // If closing the main section, also close any open industry
+      setMainExpandedSection(null)
+      setExpandedIndustry(null)
+    } else {
+      setMainExpandedSection(name)
+    }
   }
 
   const handleIndustryClick = (e: React.MouseEvent, name: string) => {
