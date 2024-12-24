@@ -163,7 +163,7 @@ export default function BeakdashPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="mt-8 grid gap-8 md:grid-cols-2"
+          className="mt-8 md:grid md:grid-cols-2 md:gap-4"
         >
           <div className="space-y-4">
             <h2 className="text-2xl font-bold">
@@ -193,7 +193,7 @@ export default function BeakdashPage() {
             </div>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="mt-16 space-y-4 lg:space-y-0 md:mt-0 lg:grid lg:grid-cols-2 lg:gap-4">
             <div className="rounded-lg border bg-card p-6">
               <Database className="h-12 w-12 text-primary" />
               <h3 className="mt-4 font-bold">Direct SQL Connection</h3>
@@ -226,7 +226,7 @@ export default function BeakdashPage() {
             </div>
           </div>
 
-          <div className="col-span-2">
+          <div className="mt-8 md:col-span-2">
             <hr className="my-2" />
             <div className="text-center">
               <h3 className="text-2xl font-bold text-primary">Tech Stack</h3>
@@ -236,7 +236,7 @@ export default function BeakdashPage() {
                 animate={{ x: 0 }}
                 transition={{ duration: 1, type: "tween", bounce: 0.3 }}
               >
-                <ul className="w-full grid grid-cols-4 gap-4">
+                <ul className="w-full grid grid-cols-2 md:grid-cols-4 gap-4">
                   <li className="flex flex-col items-center space-y-2 p-4 rounded-lg border bg-card">
                     <BarChart2 className="h-8 w-8 text-primary" />
                     <span className="font-bold">Next.js 19</span>

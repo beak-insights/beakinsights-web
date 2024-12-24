@@ -48,8 +48,8 @@ export default function Home() {
             Build powerful custom systems and unlock the potential of your data with our comprehensive development solutions. 
             We create tailored applications, seamless integrations, and innovative data pipelines.
           </p>
-          <div className="flex gap-4">
-            <Button size="lg" asChild>
+          <div className="md:flex gap-4">
+            <Button size="lg" className="mb-2 md:mb-0" asChild>
               <Link href="https://calendly.com/aurthurmusendame/intro-call">
                 Schedule a 30 minute Free Consultation
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -59,8 +59,6 @@ export default function Home() {
               <Link href="/works">Explore Our Works</Link>
             </Button>
           </div>
-          
-
         </motion.div>
       </section>
 
