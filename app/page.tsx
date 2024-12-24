@@ -51,7 +51,7 @@ export default function Home() {
           <div className="md:flex gap-4">
             <Button size="lg" className="mb-2 md:mb-0" asChild>
               <Link href="https://calendly.com/aurthurmusendame/intro-call">
-                Schedule a 30 minute Free Consultation
+                Schedule Your Free Consultation
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
@@ -63,7 +63,20 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="container m-auto py-12 sm:py-16">
+      <section className="container m-auto py-4 sm:py-16">
+        <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+          <h2 className="text-3xl font-bold mb-4">Professional Solutions</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Building Robust Systems for Tomorrow&apos;s Needs
+          </p>
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -78,9 +91,9 @@ export default function Home() {
               Design and build robust, scalable systems that grow with your business. Our architects 
               create efficient and maintainable solutions for complex challenges.
             </p>
-            <Link href="/services" className="mt-4 inline-flex items-center text-primary hover:underline">
+            {/* <Link href="/services" className="mt-4 inline-flex items-center text-primary hover:underline">
               Learn more <ChevronRight className="ml-1 h-4 w-4" />
-            </Link>
+            </Link> */}
           </div>
           <div className="rounded-lg border bg-card p-8 hover:border-primary transition-colors">
             <LineChart className="h-12 w-12 text-primary" />
@@ -89,9 +102,9 @@ export default function Home() {
               Deliver end-to-end solutions from backend systems to user interfaces. We build custom applications,
               integrate systems, and create seamless digital experiences.
             </p>
-            <Link href="/services" className="mt-4 inline-flex items-center text-primary hover:underline">
+            {/* <Link href="/services" className="mt-4 inline-flex items-center text-primary hover:underline">
               Learn more <ChevronRight className="ml-1 h-4 w-4" />
-            </Link>
+            </Link> */}
           </div>
           <div className="rounded-lg border bg-card p-8 hover:border-primary transition-colors">
             <BarChart2 className="h-12 w-12 text-primary" />
@@ -100,9 +113,9 @@ export default function Home() {
               Build powerful data pipelines and analytics solutions. From ETL processes to 
               predictive models, we help you harness the full potential of your data.
             </p>
-            <Link href="/services" className="mt-4 inline-flex items-center text-primary hover:underline">
+            {/* <Link href="/services" className="mt-4 inline-flex items-center text-primary hover:underline">
               Learn more <ChevronRight className="ml-1 h-4 w-4" />
-            </Link>
+            </Link> */}
           </div>
         </motion.div>
       </section>
@@ -261,7 +274,7 @@ export default function Home() {
           </p>
           <Button size="lg" variant="secondary" asChild>
             <Link href="https://calendly.com/aurthurmusendame/intro-call">
-              Book Your 30 Minutes Free Consultation
+              Book your Free Consultation
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
