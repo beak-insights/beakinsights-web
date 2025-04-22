@@ -30,14 +30,25 @@ export default function FelicityLimsPage() {
               Next Generation Laboratory Information Management
             </h2>
             <p className="text-muted-foreground">
-              Felicity LIMS is an open-source Laboratory Information Management System 
+              Felicity LIMS is a Laboratory Information Management System 
               that revolutionizes laboratory operations with comprehensive sample tracking, 
               workflow automation, and powerful analytics.
             </p>
             <div className="flex gap-4">
               <Button asChild>
-                <Link href="https://github.com/beak-insights/felicity-lims">View on GitHub</Link>
+                <Link href="http://felicity.beakinsights.com" target="_blank">Acess Demo Now</Link>
               </Button>
+            </div>
+            <div className="text-muted-foreground my-2">
+              <p>Credentials to access the demo:</p>
+              <div className="mt-2 space-x-4">
+                <span><strong>Username:</strong> lopezd</span>
+                <span><strong>Password:</strong> @Access123!</span>
+              </div>
+              <div className="space-x-4">
+                <span><strong>Username:</strong> simpsona</span>
+                <span><strong>Password:</strong> @Access123!</span>
+              </div>
             </div>
             <div>
               <div className="mt-16 rounded-lg">
